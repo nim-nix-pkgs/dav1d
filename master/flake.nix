@@ -11,6 +11,7 @@
   inputs.src-dav1d-master.ref   = "refs/heads/master";
   inputs.src-dav1d-master.owner = "capocasa";
   inputs.src-dav1d-master.repo  = "nim-dav1d";
+  inputs.src-dav1d-master.dir   = "";
   inputs.src-dav1d-master.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
