@@ -11,8 +11,15 @@
   inputs.src-dav1d-master.ref   = "refs/heads/master";
   inputs.src-dav1d-master.owner = "capocasa";
   inputs.src-dav1d-master.repo  = "nim-dav1d";
-  inputs.src-dav1d-master.dir   = "";
   inputs.src-dav1d-master.type  = "github";
+  
+  inputs."github.com/capocasa/nimterop".owner = "nim-nix-pkgs";
+  inputs."github.com/capocasa/nimterop".ref   = "master";
+  inputs."github.com/capocasa/nimterop".repo  = "github.com/capocasa/nimterop";
+  inputs."github.com/capocasa/nimterop".dir   = "";
+  inputs."github.com/capocasa/nimterop".type  = "github";
+  inputs."github.com/capocasa/nimterop".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."github.com/capocasa/nimterop".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
